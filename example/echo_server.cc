@@ -21,7 +21,9 @@ class EchoServiceImpl final : public EchoService::Service {
 public:
   Status echo(ServerContext *context, const EchoRequest *request,
               EchoResponse *response) override {
-    response->set_result(request->text());
+    auto text = request->text();
+    std::cout << "Received: " << text << std::endl;
+    response->set_result(text);
     return Status::OK;
   }
 };
