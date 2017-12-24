@@ -7,3 +7,11 @@ cc_proto_library(
     protos = ["echo.proto"],
     with_grpc = True,
 )
+
+cc_binary(
+    name = "echo_server",
+    srcs = ["echo_server.cc"],
+    deps = [
+        ":cc_echo_proto",
+    ],
+)
