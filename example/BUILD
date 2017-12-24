@@ -33,7 +33,8 @@ py_proto_library(
 
 py_binary(
     name = "py_echo_client",
-    srcs = ["py_echo_client.py"],
+    srcs = ["echo_client.py"],
+    main = "echo_client.py",
     deps = [
         ":py_echo_proto"
     ]
