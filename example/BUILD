@@ -15,3 +15,11 @@ cc_binary(
         ":cc_echo_proto",
     ],
 )
+
+cc_binary(
+    name = "echo_client",
+    srcs = ["echo_client.cc"],
+    deps = [
+        ":cc_echo_proto",
+    ],
+)
